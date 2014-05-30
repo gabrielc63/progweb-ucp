@@ -60,6 +60,7 @@
           function load() {
             var button = document.getElementById("buttonid");
            button.addEventListener("click", makeCorsRequest, false);
+           document.getElementById("url").value = 'http://weather.yahooapis.com/forecastrss?w=91863141&u=c';
           }
 
           document.addEventListener("DOMContentLoaded", load, false);
