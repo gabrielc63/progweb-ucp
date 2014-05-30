@@ -5,6 +5,9 @@
     <title>Document</title>
 </head>
 <body>
+
+  <input type="button" id="buttonid" value="click" >
+  <div id="desc"> </div>
     <script>
 
           function createCORSRequest(method, url) {
@@ -23,27 +26,43 @@
             return xhr;
           }
 
-          var url = 'http://weather.yahooapis.com/forecastrss?w=91863141&u=c/';
-
-          var xhr = createCORSRequest('GET', url);
-          if (!xhr) {
-            alert('CORS not supported');
-            // return;
+          function getTitle(text) {
+            return text.match('<title>(.*)?</title>')[1];
           }
 
-          // Response handlers.
-          xhr.onload = function() {
-            var text = xhr.responseXML.getElementsByTagName('description');
-            var title = text[0].firstChild.nodeValue
-            alert(title);
-          };
+          function makeCorsRequest() {
 
-          xhr.onerror = function() {
-            alert('Woops, there was an error making the request.');
-          };
+            var url = 'http://weather.yahooapis.com/forecastrss?w=91863141&u=c';
 
-          xhr.send();
-        // }
+            var xhr = createCORSRequest('GET', url);
+            if (!xhr) {
+              alert('CORS not supported');
+              // return;
+            }
+
+            // Response handlers.
+            xhr.onload = function() {
+              var text = xhr.responseXML.getElementsByTagName('description');
+              var title = text[0].firstChild.nodeValue
+              // var text = xhr.responseText;
+              // var title = getTitle(text);
+              var desc = document.getElementById("desc");
+              desc.innerHTML = title;
+            };
+
+            xhr.onerror = function() {
+              alert('Woops, there was an error making the request.');
+            };
+
+            xhr.send();
+          }
+
+          function load() {
+            var button = document.getElementById("buttonid");
+           button.addEventListener("click", makeCorsRequest, false);
+          }
+
+          document.addEventListener("DOMContentLoaded", load, false);
     </script>
 </body>
 </html>
