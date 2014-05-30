@@ -5,7 +5,7 @@
     <title>Document</title>
 </head>
 <body>
-
+  <input type="text" id="url"> <br />
   <input type="button" id="buttonid" value="click" >
   <div id="desc"> </div>
     <script>
@@ -32,7 +32,7 @@
 
           function makeCorsRequest() {
 
-            var url = 'http://weather.yahooapis.com/forecastrss?w=91863141&u=c';
+            var url = document.getElementById("url").value;
 
             var xhr = createCORSRequest('GET', url);
             if (!xhr) {
@@ -42,10 +42,10 @@
 
             // Response handlers.
             xhr.onload = function() {
-              var text = xhr.responseXML.getElementsByTagName('description');
-              var title = text[0].firstChild.nodeValue
-              // var text = xhr.responseText;
-              // var title = getTitle(text);
+              // var text = xhr.responseXML.getElementsByTagName('description');
+              // var title = text[0].firstChild.nodeValue
+              var text = xhr.responseText;
+              var title = getTitle(text);
               var desc = document.getElementById("desc");
               desc.innerHTML = title;
             };
