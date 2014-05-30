@@ -42,10 +42,10 @@
 
             // Response handlers.
             xhr.onload = function() {
-              // var text = xhr.responseXML.getElementsByTagName('description');
-              // var title = text[0].firstChild.nodeValue
-              var text = xhr.responseText;
-              var title = getTitle(text);
+              var text = xhr.responseXML.getElementsByTagName('description');
+              var title = text[1].firstChild.nodeValue
+              // var text = xhr.responseText;
+              // var title = getTitle(text);
               var desc = document.getElementById("desc");
               desc.innerHTML = title;
             };
@@ -60,7 +60,8 @@
           function load() {
             var button = document.getElementById("buttonid");
            button.addEventListener("click", makeCorsRequest, false);
-           document.getElementById("url").value = 'http://weather.yahooapis.com/forecastrss?w=91863141&u=c';
+           document.getElementById("url").value = 'forecastrss.xml'
+           // 'http://weather.yahooapis.com/forecastrss?w=91863141&u=c';
           }
 
           document.addEventListener("DOMContentLoaded", load, false);
