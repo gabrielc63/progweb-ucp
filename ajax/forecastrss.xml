@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Corrientes, AR</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Corrientes__AR/*http://weather.yahoo.com/forecast/ARCS0025_c.html</link>
+<description>Yahoo! Weather for Corrientes, AR</description>
+<language>en-us</language>
+<lastBuildDate>Fri, 30 May 2014 6:00 pm ART</lastBuildDate>
+<ttl>60</ttl>
+<yweather:location city="Corrientes" region="CTS"   country="Argentina"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="18"   direction="90"   speed="9.66" />
+<yweather:atmosphere humidity="94"  visibility="9.99"  pressure="982.05"  rising="0" />
+<yweather:astronomy sunrise="7:37 am"   sunset="6:09 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+<item>
+<title>Conditions for Corrientes, AR at 6:00 pm ART</title>
+<geo:lat>-27.48</geo:lat>
+<geo:long>-58.8</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Corrientes__AR/*http://weather.yahoo.com/forecast/ARCS0025_c.html</link>
+<pubDate>Fri, 30 May 2014 6:00 pm ART</pubDate>
+<yweather:condition  text="Cloudy"  code="26"  temp="18"  date="Fri, 30 May 2014 6:00 pm ART" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/26.gif"/><br />
+<b>Current Conditions:</b><br />
+Cloudy, 18 C<BR />
+<BR /><b>Forecast:</b><BR />
+Fri - Rain/Thunder. High: 21 Low: 17<br />
+Sat - AM Thunderstorms. High: 21 Low: 14<br />
+Sun - Partly Cloudy. High: 19 Low: 9<br />
+Mon - Sunny. High: 20 Low: 9<br />
+Tue - Sunny. High: 22 Low: 16<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Corrientes__AR/*http://weather.yahoo.com/forecast/ARCS0025_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Fri" date="30 May 2014" low="17" high="21" text="Rain/Thunder" code="12" />
+<yweather:forecast day="Sat" date="31 May 2014" low="14" high="21" text="AM Thunderstorms" code="38" />
+<yweather:forecast day="Sun" date="1 Jun 2014" low="9" high="19" text="Partly Cloudy" code="30" />
+<yweather:forecast day="Mon" date="2 Jun 2014" low="9" high="20" text="Sunny" code="32" />
+<yweather:forecast day="Tue" date="3 Jun 2014" low="16" high="22" text="Sunny" code="32" />
+<guid isPermaLink="false">ARCS0025_2014_06_03_7_00_ART</guid>
+</item>
+</channel>
+</rss>
+
+<!-- fan1675.sports.bf1.yahoo.com Fri May 30 22:14:15 PST 2014 -->
