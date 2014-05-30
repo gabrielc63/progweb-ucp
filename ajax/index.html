@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+          function createCORSRequest(method, url) {
+            var xhr = new XMLHttpRequest();
+            if ("withCredentials" in xhr) {
+              // XHR for Chrome/Firefox/Opera/Safari.
+              xhr.open(method, url, true);
+            } else if (typeof XDomainRequest != "undefined") {
+              // XDomainRequest for IE.
+              xhr = new XDomainRequest();
+              xhr.open(method, url);
+            } else {
+              // CORS not supported.
+              xhr = null;
+            }
+            return xhr;
+          }
+
+          var url = 'http://weather.yahooapis.com/forecastrss?w=91863141&u=c/';
+
+          var xhr = createCORSRequest('GET', url);
+          if (!xhr) {
+            alert('CORS not supported');
+            // return;
+          }
+
+          // Response handlers.
+          xhr.onload = function() {
+            var text = xhr.responseXML.getElementsByTagName('description');
+            var title = text[0].firstChild.nodeValue
+            alert(title);
+          };
+
+          xhr.onerror = function() {
+            alert('Woops, there was an error making the request.');
+          };
+
+          xhr.send();
+        // }
+    </script>
+</body>
+</html>
